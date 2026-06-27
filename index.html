@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmarTech - Événements & Mariages Intelligents</title>
+
+<!-- IMPORTATION DE GLIDE.JS POUR LE CARROUSEL DÉFILANT -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+
+<style>
+:root {
+    --primary: #2ec4b6; /* Le vert emblématique SmarTech */
+    --primary-dark: #0f9f90;
+    --dark-bg: #0f172a; /* Fond sombre profond */
+    --card-bg: #1e293b; /* Fond des cartes un peu plus clair */
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(180deg, #1e293b 0%, var(--dark-bg) 100%);
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+    font-weight: 800;
+}
+
+h1 span {
+    color: var(--primary);
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 16px;
+    max-width: 600px;
+    margin: 15px auto 0 auto;
+}
+
+/* Zone du Carrousel */
+.slider-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.glide__slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    color: var(--primary);
+    font-size: 22px;
+    border-bottom: 2px solid var(--card-bg);
+    padding-bottom: 10px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card p {
+    color: var(--text-muted);
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px 15px;
+    background: rgba(255,255,255,0.03);
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border-left: 3px solid var(--primary);
+}
+
+/* Bouton WhatsApp */
+.btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #25d366; /* Vert officiel WhatsApp */
+    color: white;
+    text-decoration: none;
+    padding: 18px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    margin: 40px auto;
+    max-width: 320px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    background: #20ba59;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.why-item {
+    background: rgba(46, 196, 182, 0.1);
+    border: 1px solid rgba(46, 196, 182, 0.2);
+    padding: 15px;
+    text-align: center;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-muted);
+    font-size: 14px;
+    background: #0b111e;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Smar<span>Tech</span></h1>
+    <p class="subtitle">Votre solution moderne pour des événements et mariages intelligents, organisés et sans stress. Nous transformons votre événement en une expérience digitale, fluide et professionnelle.</p>
+</header>
+
+<!-- CARROUSEL DES MARIÉS STYLÉS -->
+<div class="slider-container">
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide"><img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTzdqotu-MiFjoxCl2fDDMZ97S3JFdLhrF_K4dRdsN2mG2bTwdowoOkpbM5YIpB8nQ48Id_amee0Mg5LbJUyidSIVhVF2M_WWon" alt="Mariés style 1"></li>
+                <li class="glide__slide"><img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSelp-wzoIzoSbkqwUN_y3QMNbVnZIw1Tt3oUQF9ut4g6SHqY42CebQvEoEwytb14Be7YIqrCluQPZxmZzdsPn6SP3OTLFPrHqo" alt="Mariés style 2"></li>
+                <li class="glide__slide"><img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSXK_G7QtaHdvwpRn9nnxQswE5m-vq_TtBsZXI7t7g4jTVmP6Sd7xJbIN_uWoLnnV1L-MlIxIT2NT9XzwwD7eDxfVQvkdJVLA8W" alt="Mariés style 3"></li>
+            </ul>
+        </div>
+        <!-- Boutons de navigation du carrousel -->
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">◀</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">▶</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="section-title">💍 Pour votre mariage</div>
+    <p style="color: var(--text-muted);">Chez SmarTech, nous vous aidons à gérer votre mariage de A à Z grâce à la technologie :</p>
+    
+    <div class="card">
+        <h3>📌 Invitations digitales</h3>
+        <p>Fini les papiers perdus. Vos invités reçoivent une invitation en ligne simple et élégante.</p>
+    </div>
+    <div class="card">
+        <h3>📌 QR Code d’accès</h3>
+        <p>Chaque invité reçoit un QR code unique pour un accès rapide et sécurisé le jour du mariage.</p>
+    </div>
+    <div class="card">
+        <h3>📌 Confirmation automatique</h3>
+        <p>Les invités confirment leur présence en un clic, et toutes les données sont enregistrées automatiquement.</p>
+    </div>
+    <div class="card">
+        <h3>📌 Liste des invités organisée</h3>
+        <p>Tout est centralisé dans un tableau clair (Google Sheets ou autre système).</p>
+    </div>
+
+    <!-- PREMIER BOUTON CONTACT -->
+    <a href="https://wa.me/243829744248" class="btn-whatsapp" target="_blank">
+        💬 Discuter sur WhatsApp
+    </a>
+
+    <div class="section-title">🎉 Pour vos événements</div>
+    <p style="color: var(--text-muted);">SmarTech vous accompagne aussi pour vos conférences, anniversaires, événements privés, cérémonies et réceptions. Nous mettons en place :</p>
+    
+    <ul>
+        <li>📌 Inscription en ligne</li>
+        <li>📌 Gestion automatique des invités</li>
+        <li>📌 Envoi de messages WhatsApp ou email</li>
+        <li>📌 Suivi en temps réel des participants</li>
+    </ul>
+
+    <div class="section-title">⚡ Pourquoi SmarTech ?</div>
+    <div class="why-grid">
+        <div class="why-item">✔ Gain de temps</div>
+        <div class="why-item">✔ Zéro stress le jour J</div>
+        <div class="why-item">✔ Organisation pro</div>
+        <div class="why-item">✔ Expérience moderne</div>
+    </div>
+
+    <div class="section-title">📲 Conclusion</div>
+    <p style="text-align: center; color: var(--text-muted); margin-top: 20px;">Avec SmarTech, votre mariage ou événement devient simple, élégant et 100% digitalisé.</p>
+
+    <!-- DEUXIÈME BOUTON CONTACT -->
+    <a href="https://wa.me/243829744248" class="btn-whatsapp" target="_blank">
+        💬 Contactez SmarTech
+    </a>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 SmarTech. Tous droits réservés.</p>
+</footer>
+
+<!-- SCRIPT POUR S'ASSURER QUE LE DEFILLEMENT DES PHOTOS FONCTIONNE -->
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+<script>
+  new Glide('.glide', {
+    type: 'carousel',
+    startAt: 0,
+    perView: 1,
+    autoplay: 3500 /* Défilement automatique toutes les 3.5s */
+  }).mount()
+</script>
+
+</body>
+  </html>
