@@ -11,12 +11,13 @@
 
 <style>
 :root {
-    --primary: #2ec4b6; /* Le vert émeraude SmarTech */
+    --primary: #2ec4b6;
     --primary-light: #64dfdf;
-    --dark-bg: #0b111e; /* Fond bleu nuit très sombre */
-    --card-bg: #131c2e; /* Cartes légèrement plus claires */
+    --dark-bg: #0b111e; /* Fond bleu nuit sombre de Jimdo */
     --text-main: #ffffff;
     --text-muted: #94a3b8;
+    --btn-bg: #c2cfe9; /* Couleur claire des boutons Jimdo */
+    --btn-text: #0b111e;
 }
 
 body {
@@ -73,6 +74,25 @@ header {
     font-size: 16px;
     max-width: 650px;
     margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+/* Bouton style Jimdo */
+.btn-jimdo {
+    display: inline-block;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    text-decoration: none;
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background 0.2s;
+    margin-bottom: 20px;
+}
+
+.btn-jimdo:hover {
+    background-color: #aebfd4;
 }
 
 /* Carrousel d'images */
@@ -87,7 +107,7 @@ header {
     object-fit: cover;
 }
 
-/* Conteneur de sections */
+/* Conteneur de sections sans encadrés */
 .container {
     max-width: 700px;
     margin: 0 auto;
@@ -95,7 +115,7 @@ header {
 }
 
 .section-title {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 700;
     margin-top: 60px;
     margin-bottom: 15px;
@@ -103,75 +123,67 @@ header {
 
 .section-subtitle {
     color: var(--text-muted);
-    margin-bottom: 30px;
-    font-size: 15px;
+    margin-bottom: 40px;
+    font-size: 16px;
 }
 
-/* Cartes minimalistes */
-.card {
-    background: var(--card-bg);
-    padding: 25px;
-    border-radius: 12px;
-    margin-bottom: 25px;
-    border-left: 4px solid var(--primary);
+/* Blocs de texte épurés (Remplacement des cartes) */
+.text-block {
+    margin-bottom: 40px;
 }
 
-.card h3 {
-    margin: 0 0 10px 0;
-    font-size: 18px;
+.text-block h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
     color: var(--text-main);
 }
 
-.card p {
+.text-block p {
     margin: 0;
     color: var(--text-muted);
     font-size: 15px;
 }
 
-/* Listes élégantes */
-.custom-list {
+/* Liste épurée */
+.clean-list {
     padding: 0;
     list-style: none;
 }
 
-.custom-list li {
-    padding: 12px 15px;
-    background: var(--card-bg);
-    margin-bottom: 10px;
-    border-radius: 8px;
-    font-size: 15px;
+.clean-list li {
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--text-muted);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Grille Pourquoi Smartech */
-.grid-why {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-bottom: 40px;
-}
-
-.why-box {
-    background: rgba(46, 196, 182, 0.08);
-    border: 1px solid rgba(46, 196, 182, 0.2);
-    padding: 15px;
-    border-radius: 10px;
+/* Témoignages Style Jimdo */
+.testimonials-section {
     text-align: center;
-    font-weight: 600;
-    font-size: 15px;
+    padding: 40px 0;
 }
 
-/* Section FAQ Accordéon */
+.testimonials-section p {
+    font-size: 18px;
+    color: var(--text-main);
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    line-height: 1.5;
+}
+
+/* Section FAQ épurée sans aucun encadré */
 .faq-item {
-    border-bottom: 1px solid #1e293b;
-    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
 }
 
 .faq-question {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: 500;
     cursor: pointer;
     user-select: none;
 }
@@ -185,16 +197,18 @@ header {
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     color: var(--text-muted);
-    font-size: 14px;
-    margin-top: 10px;
+    font-size: 15px;
+    margin-top: 12px;
+    line-height: 1.6;
 }
 
 .faq-toggle {
-    font-size: 20px;
+    font-size: 18px;
+    color: var(--text-muted);
     transition: transform 0.2s;
 }
 
-/* Bouton Contact WhatsApp */
+/* Bouton WhatsApp discret */
 .btn-whatsapp {
     display: flex;
     align-items: center;
@@ -207,9 +221,9 @@ header {
     font-size: 16px;
     font-weight: bold;
     border-radius: 30px;
-    margin: 40px auto;
+    margin: 50px auto;
     max-width: 280px;
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.25);
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.15);
     transition: 0.2s;
 }
 
@@ -224,7 +238,7 @@ footer {
     font-size: 13px;
     color: var(--text-muted);
     background: #070b14;
-    margin-top: 60px;
+    margin-top: 80px;
 }
 </style>
 </head>
@@ -236,8 +250,8 @@ footer {
 </header>
 
 <section class="hero">
-    <h1>Votre site de mariage unique</h1>
-    <p>Bonjour et bienvenue chez SmarTech, votre solution moderne pour des événements et mariages intelligents, organisés et sans stress. Nous transformons votre événement en une expérience digitale, fluide et professionnelle.</p>
+    <h1>Smartech transforme votre rêve de mariage en une présence en ligne élégante et personnalisée, conçue pour captiver vos invités dès le premier clic.</h1>
+    <a href="#" class="btn-jimdo">Découvrez nos créations</a>
 </section>
 
 <!-- LE CARROUSEL D'IMAGES -->
@@ -259,80 +273,68 @@ footer {
 
 <div class="container">
 
-    <!-- SECTION MARIAGE -->
-    <div class="section-title">Pour votre mariage</div>
-    <div class="section-subtitle">Chez SmarTech, nous vous aidons à gérer votre mariage de A à Z grâce à la technologie :</div>
+    <!-- SECTION TEMOIGNAGES (IMAGE 11) -->
+    <section class="testimonials-section">
+        <p>Nos clients apprécient la simplicité de notre approche et la rapidité avec laquelle leur site de mariage a pris vie.</p>
+        <a href="#" class="btn-jimdo">Lire plus</a>
+    </section>
 
-    <div class="card">
+    <!-- SECTION MARIAGE DESIGN EPURE -->
+    <div class="section-title">Votre site mariage sur mesure</div>
+    <div class="section-subtitle">Smartech crée des sites uniques qui racontent votre histoire d'amour avec élégance et simplicité. En gérant tout de A à Z :</div>
+
+    <div class="text-block">
         <h3>Invitations digitales</h3>
         <p>Fini les papiers perdus. Vos invités reçoivent une invitation en ligne simple et élégante.</p>
     </div>
-    <div class="card">
+    <div class="text-block">
         <h3>QR Code d’accès</h3>
         <p>Chaque invité reçoit un QR code unique pour un accès rapide et sécurisé le jour du mariage.</p>
     </div>
-    <div class="card">
+    <div class="text-block">
         <h3>Confirmation automatique</h3>
         <p>Les invités confirment leur présence en un clic, et toutes les données sont enregistrées automatiquement.</p>
     </div>
-    <div class="card">
+    <div class="text-block">
         <h3>Liste des invités organisée</h3>
         <p>Tout est centralisé dans un tableau clair (Google Sheets ou autre système).</p>
     </div>
 
-    <a href="https://wa.me/243829744248" class="btn-whatsapp" target="_blank">
-        Discuter sur WhatsApp
-    </a>
-
-    <!-- SECTION ÉVÉNEMENTS -->
+    <!-- SECTION ÉVÉNEMENTS DESIGN EPURE -->
     <div class="section-title">Pour vos événements</div>
     <div class="section-subtitle">SmarTech vous accompagne aussi pour vos conférences, anniversaires, événements privés, cérémonies et réceptions. Nous mettons en place :</div>
 
-    <ul class="custom-list">
+    <ul class="clean-list">
         <li>Inscription en ligne</li>
         <li>Gestion automatique des invités</li>
         <li>Envoi de messages WhatsApp ou email</li>
         <li>Suivi en temps réel des participants</li>
     </ul>
 
-    <!-- SECTION POURQUOI -->
-    <div class="section-title">Pourquoi SmarTech ?</div>
-    <div style="margin-bottom:20px;"></div>
-    <div class="grid-why">
-        <div class="why-box">Gain de temps</div>
-        <div class="why-box">Zéro stress le jour J</div>
-        <div class="why-box">Organisation pro</div>
-        <div class="why-box">Expérience moderne</div>
-    </div>
-
-    <!-- SECTION FAQ ACCORDÉON -->
+    <!-- SECTION FAQ SANS ENCADRÉS -->
     <div class="section-title">Questions fréquentes sur nos services</div>
-    <div class="section-subtitle">Découvrez les réponses aux interrogations courantes pour mieux comprendre notre approche unique. Nous clarifions les modalités afin que vous soyez en confiance avant de démarrer votre projet.</div>
+    <div class="section-subtitle">Découvrez les réponses aux interrogations courantes pour mieux comprendre notre approche unique.</div>
 
     <div class="faq-item">
-        <div class="faq-question">Quels types de sites créez-vous ? <span class="faq-toggle">+</span></div>
+        <div class="faq-question">Quels types de sites créez-vous ? <span class="faq-toggle">▼</span></div>
         <div class="faq-answer">Nous créons des sites vitrines, des portfolios professionnels, ainsi que des plateformes événementielles complètes et personnalisées pour vos mariages et réceptions.</div>
     </div>
     <div class="faq-item">
-        <div class="faq-question">Combien de temps prend la création d’un site ? <span class="faq-toggle">+</span></div>
+        <div class="faq-question">Combien de temps prend la création d’un site ? <span class="faq-toggle">▼</span></div>
         <div class="faq-answer">La création d'un site sur-mesure prend généralement entre 3 à 7 jours selon la complexité et les fonctionnalités demandées.</div>
     </div>
     <div class="faq-item">
-        <div class="faq-question">Proposez-vous un accompagnement personnalisé ? <span class="faq-toggle">+</span></div>
+        <div class="faq-question">Proposez-vous un accompagnement personnalisé ? <span class="faq-toggle">▼</span></div>
         <div class="faq-answer">Oui, nous vous accompagnons pas à pas, de la conception à la mise en ligne, et restons disponibles pour assurer le support technique le jour de votre événement.</div>
     </div>
     <div class="faq-item">
-        <div class="faq-question">Quels sont les tarifs proposés ? <span class="faq-toggle">+</span></div>
+        <div class="faq-question">Quels sont les tarifs proposés ? <span class="faq-toggle">▼</span></div>
         <div class="faq-answer">Nos tarifs s'adaptent à vos besoins précis. Contactez-nous directement sur WhatsApp pour obtenir un devis personnalisé gratuit.</div>
     </div>
     <div class="faq-item">
-        <div class="faq-question">Comment démarrer mon projet ? <span class="faq-toggle">+</span></div>
+        <div class="faq-question">Comment démarrer mon projet ? <span class="faq-toggle">▼</span></div>
         <div class="faq-answer">Cliquez simplement sur l'un de nos boutons WhatsApp ci-dessous pour nous parler de votre projet ! Nous sommes très réactifs.</div>
     </div>
-
-    <!-- CONCLUSION & CONTACT -->
-    <div class="section-title" style="text-align: center; margin-top: 60px;">En conclusion</div>
-    <p style="text-align: center; color: var(--text-muted);">Avec SmarTech, votre mariage ou événement devient simple, élégant et 100% digitalisé.</p>
 
     <a href="https://wa.me/243829744248" class="btn-whatsapp" target="_blank">
         Contactez SmarTech
@@ -344,7 +346,7 @@ footer {
     <p>&copy; 2026 Smartech. Tous droits réservés.</p>
 </footer>
 
-<!-- SCRIPTS DU CARROUSEL ET DE LA FAQ INTERACTIVE -->
+<!-- SCRIPTS DE GLIDE ET DE LA FAQ -->
 <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 <script>
   new Glide('.glide', {
@@ -360,11 +362,9 @@ footer {
           
           if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
               answer.style.maxHeight = '0px';
-              toggle.textContent = '+';
               toggle.style.transform = 'rotate(0deg)';
           } else {
               answer.style.maxHeight = answer.scrollHeight + 'px';
-              toggle.textContent = '−';
               toggle.style.transform = 'rotate(180deg)';
           }
       });
@@ -372,4 +372,4 @@ footer {
 </script>
 
 </body>
-            </html>
+</html>
