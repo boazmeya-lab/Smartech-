@@ -13,11 +13,15 @@
 :root {
     --primary: #2ec4b6;
     --primary-light: #64dfdf;
-    --dark-bg: #0b111e; /* Fond bleu nuit sombre de Jimdo */
+    --dark-bg: #0b111e; 
     --text-main: #ffffff;
     --text-muted: #94a3b8;
-    --btn-bg: #c2cfe9; /* Couleur claire des boutons Jimdo */
+    --btn-bg: #c2cfe9; 
     --btn-text: #0b111e;
+}
+
+html {
+    scroll-behavior: smooth; /* Permet un défilement fluide lors du clic sur le bouton */
 }
 
 body {
@@ -71,7 +75,8 @@ header {
 
 .hero p {
     color: var(--text-muted);
-    font-size: 16px;
+    font-size: 18px;
+    font-style: italic;
     max-width: 650px;
     margin: 0 auto;
     margin-bottom: 30px;
@@ -127,7 +132,7 @@ header {
     font-size: 16px;
 }
 
-/* Blocs de texte épurés (Remplacement des cartes) */
+/* Blocs de texte épurés */
 .text-block {
     margin-bottom: 40px;
 }
@@ -172,7 +177,7 @@ header {
     line-height: 1.5;
 }
 
-/* Section FAQ épurée sans aucun encadré */
+/* Section FAQ épurée */
 .faq-item {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 20px 0;
@@ -250,18 +255,19 @@ footer {
 </header>
 
 <section class="hero">
-    <h1>Smartech transforme votre rêve de mariage en une présence en ligne élégante et personnalisée, conçue pour captiver vos invités dès le premier clic.</h1>
-    <a href="#" class="btn-jimdo">Découvrez nos créations</a>
+    <h1>Votre site de mariage unique</h1>
+    <p>" Votre histoire, votre style, votre site unique. "</p>
+    <a href="#creations" class="btn-jimdo">Découvrez nos créations</a>
 </section>
 
-<!-- LE CARROUSEL D'IMAGES -->
+<!-- LE CARROUSEL D'IMAGES (LIENS CORRIGÉS) -->
 <div class="slider-container">
     <div class="glide">
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
                 <li class="glide__slide"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1200" alt="Mariage unique"></li>
                 <li class="glide__slide"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1200" alt="Découvrez nos réalisations"></li>
-                <li class="glide__slide"><img src="https://images.unsplash.com/photo-1519225495810-7512c696505a?auto=format&fit=crop&q=80&w=1200" alt="Événements d'exception"></li>
+                <li class="glide__slide"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=1200" alt="Événements d'exception"></li>
             </ul>
         </div>
         <div class="glide__arrows" data-glide-el="controls">
@@ -273,14 +279,14 @@ footer {
 
 <div class="container">
 
-    <!-- SECTION TEMOIGNAGES (IMAGE 11) -->
+    <!-- SECTION TEMOIGNAGES -->
     <section class="testimonials-section">
         <p>Nos clients apprécient la simplicité de notre approche et la rapidité avec laquelle leur site de mariage a pris vie.</p>
-        <a href="#" class="btn-jimdo">Lire plus</a>
+        <a href="#creations" class="btn-jimdo">Lire plus</a>
     </section>
 
     <!-- SECTION MARIAGE DESIGN EPURE -->
-    <div class="section-title">Votre site mariage sur mesure</div>
+    <div id="creations" class="section-title">Votre site mariage sur mesure</div>
     <div class="section-subtitle">Smartech crée des sites uniques qui racontent votre histoire d'amour avec élégance et simplicité. En gérant tout de A à Z :</div>
 
     <div class="text-block">
@@ -372,4 +378,4 @@ footer {
 </script>
 
 </body>
-</html>
+    </html>
