@@ -3,214 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site de Mariage</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Source Sans 3', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    colors: {
-                        bleuSombre: '#0B1B3D', 
-                        dore: '#C5A880',       
-                        doreHover: '#B3966E',  
-                    }
-                }
-            }
-        }
-    </script>
+    <title>Démo - Modèle Éternel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        .curved-banner {
-            position: relative;
-            background-color: #11254C; 
-            padding-bottom: 4rem;
-        }
-        .curved-banner::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 40px;
-            background: #ffffff; 
-            border-top-left-radius: 50% 100%;
-            border-top-right-radius: 50% 100%;
-        }
+        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background-color: #fbfbf9; color: #2c2c2c; text-align: center; }
+        .hero { padding: 80px 20px; background: #ffffff; border-bottom: 1px solid #eaeae6; }
+        .names { font-family: 'Great Vibes', cursive; font-size: 50px; color: #c5a059; margin: 0; }
+        .sub { font-size: 14px; text-transform: uppercase; letter-spacing: 3px; color: #777; margin-bottom: 20px; }
+        #countdown { font-size: 20px; font-weight: 600; color: #c5a059; margin: 20px 0; }
+        .section { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+        h2 { font-family: 'Great Vibes', cursive; font-size: 35px; color: #c5a059; margin-bottom: 20px; }
+        .programme { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+        .etape { background: #fff; padding: 20px; border: 1px solid #f0edf0; width: 180px; border-radius: 8px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 20px; }
+        .gallery-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
+        .cta-box { padding: 60px 20px; background-color: #111111; color: #ffffff; }
+        .btn-commander { display: inline-block; background: #c5a059; color: #111; text-decoration: none; font-weight: bold; padding: 15px 30px; border-radius: 4px; margin-top: 20px; }
     </style>
 </head>
-<body class="bg-white text-gray-800 font-sans antialiased max-w-md mx-auto shadow-lg relative min-h-screen">
+<body>
 
-    <!-- 1. EN-TÊTE (Header) -->
-    <header class="flex items-center justify-between px-4 py-3 border-b border-gray-100 bg-white sticky top-0 z-50">
-        <button class="text-bleuSombre focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-        </button>
-        
-        <div class="flex items-center space-x-1 font-bold text-xl tracking-tight">
-            <span class="text-dore text-xl">✨</span>
-            <span class="font-serif italic text-bleuSombre text-2xl lowercase">notre<span class="text-dore font-sans not-italic text-lg">.mariage</span></span>
-        </div>
-
-        <button class="text-bleuSombre focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-            </svg>
-        </button>
+    <header class="hero">
+        <h1 class="names">Sarah & Marc</h1>
+        <p class="sub">Se disent "Oui" pour l'éternité</p>
+        <div id="countdown">Chargement...</div>
     </header>
 
-    <!-- Fil d'ariane -->
-    <div class="px-4 py-2 text-xs text-gray-400 bg-white">
-        Mariage <span class="mx-1">/</span> <span class="text-bleuSombre/70">Organisation du mariage</span>
-    </div>
-
-    <!-- 2. BANNIÈRE PRINCIPALE -->
-    <section class="curved-banner pt-4 overflow-hidden flex flex-col items-center">
-        <div class="relative w-11/12 h-44 bg-bleuSombre rounded-t-xl border-4 border-b-0 border-bleuSombre shadow-xl overflow-hidden">
-            <div class="absolute inset-0 bg-cover bg-center flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600&auto=format&fit=crop');">
-                <div class="absolute inset-0 bg-bleuSombre/30"></div>
-                <h3 class="relative text-dore font-serif text-2xl tracking-widest bg-bleuSombre/60 px-4 py-1 rounded backdrop-blur-sm">Marie & Paul</h3>
-            </div>
+    <section class="section">
+        <h2>Le Programme</h2>
+        <div class="programme">
+            <div class="etape"><h3>15h30</h3><p>Cérémonie</p></div>
+            <div class="etape"><h3>17h00</h3><p>Cocktail</p></div>
+            <div class="etape"><h3>20h00</h3><p>Dîner</p></div>
         </div>
     </section>
 
-    <!-- 3. ZONE TEXTE DYNAMIQUE (Modifiée pour afficher le Bienvenue) -->
-    <main class="px-5 text-center -mt-4 relative z-10">
-        <!-- Cet ID permettra d'injecter le message de bienvenue personnalisé -->
-        <h1 id="titre-bienvenue" class="font-serif text-3xl font-bold text-bleuSombre mb-4">Site de mariage</h1>
-        
-        <p id="texte-description" class="text-gray-600 text-sm leading-relaxed mb-6">
-            Créez gratuitement et en toute simplicité votre site de mariage personnalisé. Vous pourrez y partager toutes les informations détaillées de votre jour J avec tous vos invités.
-        </p>
-
-        <!-- Formulaire d'inscription -->
-        <div id="bloc-formulaire" class="text-left mb-8">
-            <span class="text-xs font-bold text-bleuSombre tracking-wider block mb-3">INSCRIVEZ-VOUS</span>
-            
-            <form class="space-y-3" onsubmit="event.preventDefault();">
-                <div class="relative">
-                    <input type="text" placeholder="Prénom et Nom" class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-dore pr-10">
-                    <span class="absolute right-3 top-3.5 text-bleuSombre/50">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" /></svg>
-                    </span>
-                </div>
-
-                <div class="relative">
-                    <input type="email" placeholder="E-mail" class="w-full px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-dore pr-10">
-                    <span class="absolute right-3 top-3.5 text-bleuSombre/50">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
-                    </span>
-                </div>
-
-                <button type="submit" class="w-full bg-dore hover:bg-doreHover text-white font-semibold py-3.5 rounded-lg shadow-md transition duration-200 uppercase tracking-wider text-xs">
-                    Commencez ici
-                </button>
-            </form>
-        </div>
-    </main>
-
-    <hr class="border-gray-100 my-4">
-
-    <!-- 4. SECTION AVANTAGES -->
-    <section class="px-5 py-6 text-center bg-slate-50">
-        <h2 class="font-serif text-2xl font-bold text-bleuSombre mb-3 leading-tight">
-            Créez votre site moderne, facile d'utilisation et personnalisable
-        </h2>
-        <p class="text-sm text-gray-600 mb-8 leading-relaxed">
-            Choisissez un nouveau thème, ajoutez tous les détails de votre mariage et partagez-le avec vos invités.
-        </p>
-
-        <div class="space-y-8 max-w-xs mx-auto">
-            <div class="flex flex-col items-center">
-                <div class="text-3xl mb-2 text-dore">🥂</div>
-                <h4 class="font-bold text-bleuSombre text-base mb-1">Partagez les informations</h4>
-                <p class="text-xs text-gray-500 leading-relaxed">
-                    Informez vos invités du programme, des lieux et de toutes les nouveautés concernant votre mariage.
-                </p>
-            </div>
-
-            <div class="flex flex-col items-center">
-                <div class="text-3xl mb-2 text-dore">✉️</div>
-                <h4 class="font-bold text-bleuSombre text-base mb-1">Demandez la confirmation de présence</h4>
-                <p class="text-xs text-gray-500 leading-relaxed">
-                    Les réponses de vos invités se synchronisent avec la Liste d'Invités.
-                </p>
-            </div>
+    <section class="section">
+        <h2>Galerie Photos</h2>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=400&q=80" alt="Mariage">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=400&q=80" alt="Mariage">
         </div>
     </section>
 
-    <!-- 5. GALERIE DE THÈMES -->
-    <section class="px-5 py-8 text-center bg-white">
-        <h2 class="font-serif text-2xl font-bold text-bleuSombre mb-3 leading-tight">
-            Thèmes Premium à votre disposition
-        </h2>
-        
-        <div class="flex space-x-4 overflow-x-auto pb-4 px-2">
-            <div class="min-w-[70%] bg-gray-50 rounded-xl p-3 border border-gray-100 shadow-sm flex-shrink-0">
-                <div class="h-48 rounded-lg flex flex-col justify-end p-3 text-left relative overflow-hidden text-white" style="background-image: linear-gradient(to top, rgba(11,27,61,0.8), transparent), url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=400&auto=format&fit=crop'); background-size: cover;">
-                    <span class="text-xs text-dore font-semibold">STYLE ROYAL</span>
-                    <h5 class="font-serif text-base">Bleu nuit & Or Éclatant</h5>
-                </div>
-            </div>
-        </div>
-
-        <button class="mt-4 inline-flex items-center justify-center space-x-2 w-full py-3 border border-dore rounded-lg text-sm font-semibold text-dore hover:bg-slate-50 transition">
-            <span>Voir plus de thèmes</span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-            </svg>
-        </button>
+    <section class="section">
+        <h2>Confirmer votre présence</h2>
+        <iframe data-tally-src="https://tally.so/embed/RG299p?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" width="100%" height="400" frameborder="0" title="RSVP"></iframe>
     </section>
 
-    <!-- 6. ASSISTANCE FLOTTANTE -->
-    <div class="fixed bottom-20 right-4 z-50">
-        <div class="relative cursor-pointer">
-            <span class="absolute -top-1 -right-1 bg-bleuSombre text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white z-10">1</span>
-            <div class="w-14 h-14 rounded-full border-2 border-dore bg-white p-0.5 shadow-lg overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop" alt="Support" class="w-full h-full object-cover rounded-full">
-            </div>
-        </div>
+    <div class="cta-box">
+        <h2>Ce modèle vous plaît ?</h2>
+        <a href="https://wa.me/243XXXXXXXXX?text=Bonjour%20Smartech,%20je%20souhaite%20commander%20le%20modèle%20Éternel" 
+           target="_blank" class="btn-commander">🛒 Commander ce modèle</a>
     </div>
 
-    <!-- Pied de page collant -->
-    <div class="sticky bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-t border-gray-100 p-3 shadow-xl flex justify-center z-40">
-        <button class="w-11/12 bg-bleuSombre hover:bg-slate-800 text-white font-semibold py-3 rounded-lg text-sm tracking-wider uppercase transition">
-            Créer un compte
-        </button>
-    </div>
-
-    <!-- SCRIPT DE PERSONNALISATION DYNAMIQUE -->
     <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            // 1. On récupère les paramètres de l'adresse URL (ex: ?name=Caleb)
-            const urlParams = new URLSearchParams(window.location.search);
-            const nomInvite = urlParams.get('name');
-
-            // 2. Si un nom est présent dans l'URL, on modifie la page à la volée !
-            if (nomInvite) {
-                // On nettoie le texte pour éviter les caractères bizarres du web (%20, etc.)
-                const nomPropre = decodeURIComponent(nomInvite);
-                
-                // Changement du titre principal
-                document.getElementById('titre-bienvenue').innerText = `Bienvenue ${nomPropre} !`;
-                
-                // Changement du texte d'explication
-                document.getElementById('texte-description').innerText = `Nous sommes extrêmement heureux de vous compter parmi nos invités. Scannez validé avec succès avec Smart Check.`;
-                
-                // On cache le formulaire d'inscription car l'invité est déjà enregistré
-                document.getElementById('bloc-formulaire').style.display = 'none';
-            }
-        });
+        // Compte à rebours
+        var weddingDate = new Date("Sep 12, 2026 15:30:00").getTime();
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = weddingDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            document.getElementById("countdown").innerHTML = days + " jours avant le grand jour !";
+        }, 1000);
     </script>
-
+    <script async src="https://tally.so/widgets/embed.js"></script>
 </body>
-    </html>
+</html>
