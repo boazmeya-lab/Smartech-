@@ -3,70 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Démo - Modèle Éternel</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Ruth & Joseph - Modèle Éternel Demo</title>
+    <!-- Polices chics et élégantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background-color: #fbfbf9; color: #2c2c2c; text-align: center; }
-        .hero { padding: 80px 20px; background: #ffffff; border-bottom: 1px solid #eaeae6; }
-        .names { font-family: 'Great Vibes', cursive; font-size: 50px; color: #c5a059; margin: 0; }
-        .sub { font-size: 14px; text-transform: uppercase; letter-spacing: 3px; color: #777; margin-bottom: 20px; }
-        #countdown { font-size: 20px; font-weight: 600; color: #c5a059; margin: 20px 0; }
-        .section { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
-        h2 { font-family: 'Great Vibes', cursive; font-size: 35px; color: #c5a059; margin-bottom: 20px; }
-        .programme { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
-        .etape { background: #fff; padding: 20px; border: 1px solid #f0edf0; width: 180px; border-radius: 8px; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 20px; }
-        .gallery-grid img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; }
-        .cta-box { padding: 60px 20px; background-color: #111111; color: #ffffff; }
-        .btn-commander { display: inline-block; background: #c5a059; color: #111; text-decoration: none; font-weight: bold; padding: 15px 30px; border-radius: 4px; margin-top: 20px; }
+        /* Base du site (Inspiré des captures) */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fbf9f6; /* Fond crème doux */
+            color: #333333;
+            text-align: center;
+        }
+
+        h1, h2, h3, .serif-font {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+        }
+
+        /* Accueil - Hero Section avec grande photo */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            padding: 0 20px;
+        }
+
+        .hero-date {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin: 0 0 20px 0;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            font-style: italic;
+            max-width: 500px;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Sections Générales */
+        .section {
+            padding: 60px 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #222;
+            margin-bottom: 5px;
+        }
+
+        .divider {
+            width: 50px;
+            height: 1px;
+            background-color: #c5a059; /* Ligne dorée */
+            margin: 15px auto 30px auto;
+        }
+
+        /* Compte à rebours stylisé en blocs */
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .countdown-box {
+            background: #ffffff;
+            border: 1px solid #eae5dd;
+            border-radius: 12px;
+            width: 75px;
+            padding: 15px 5px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .countdown-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: bold;
+            color: #b8924e;
+        }
+
+        .countdown-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #888;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        /* Boutons Célébration (Dorés discrets) */
+        .btn-gold {
+            display: inline-block;
+            background-color: #ccab6d;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin: 10px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .btn-gold:hover {
+            background-color: #bfa063;
+        }
+
+        /* Texte histoire */
+        .history-text {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+
+        /* Grille de Galerie Photo */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Section de Commande Finale (Fond Noir comme sur l'image) */
+        .footer-cta {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 60px 20px;
+        }
+
+        .footer-cta h2 {
+            font-size: 26px;
+            margin: 0 0 10px 0;
+            letter-spacing: 1px;
+        }
+
+        .footer-cta p {
+            color: #aaa;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .btn-commander {829 744 248}
+            display: inline-block;
+            background-color: #ccab6d;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        .btn-commander:hover {
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
 
+    <!-- 1. Section Accueil (Hero) -->
     <header class="hero">
-        <h1 class="names">Sarah & Marc</h1>
-        <p class="sub">Se disent "Oui" pour l'éternité</p>
-        <div id="countdown">Chargement...</div>
+        <div class="hero-date">12 . 12 . 2026</div>
+        <h1>Ruth & Joseph</h1>
+        <p>Nous avons la joie de vous inviter à célébrer notre mariage</p>
     </header>
 
+    <!-- 2. Section Compte à Rebours -->
     <section class="section">
-        <h2>Le Programme</h2>
-        <div class="programme">
-            <div class="etape"><h3>15h30</h3><p>Cérémonie</p></div>
-            <div class="etape"><h3>17h00</h3><p>Cocktail</p></div>
-            <div class="etape"><h3>20h00</h3><p>Dîner</p></div>
+        <h2 class="section-title">Le grand jour approche</h2>
+        <div class="countdown-container">
+            <div class="countdown-box"><div class="countdown-num" id="days">00</div><div class="countdown-label">Jours</div></div>
+            <div class="countdown-box"><div class="countdown-num" id="hours">00</div><div class="countdown-label">Heures</div></div>
+            <div class="countdown-box"><div class="countdown-num" id="minutes">00</div><div class="countdown-label">Minutes</div></div>
+            <div class="countdown-box"><div class="countdown-num" id="seconds">00</div><div class="countdown-label">Secondes</div></div>
         </div>
     </section>
 
+    <!-- 3. Section Célébration -->
+    <section class="section" style="background-color: #ffffff;">
+        <h2 class="section-title">Célébration</h2>
+        <div class="divider"></div>
+        <p>📅 12 décembre 2026</p>
+        <p>📍 Dubaï, Émirats arabes unis</p>
+        <a href="#" class="btn-gold">Localiser</a>
+        <a href="#" class="btn-gold">Ajouter au calendrier</a>
+    </section>
+
+    <!-- 4. Section Notre Histoire -->
     <section class="section">
-        <h2>Galerie Photos</h2>
+        <h2 class="section-title">Notre Histoire</h2>
+        <div class="divider"></div>
+        <p class="history-text">
+            Notre histoire a commencé comme un murmure du destin — deux âmes qui se sont trouvées au milieu du tumulte de la vie. Depuis ce premier regard, chaque jour passé ensemble a été une promesse d'éternité. De nos rires partés à nos rêves entrelacés, notre amour a grandi comme un jardin cultivé avec patience et tendresse. Aujourd'hui, nous sommes prêts à écrire le plus beau chapitre de notre vie, entourés de ceux qui nous sont chers.
+        </p>
+    </section>
+
+    <!-- 5. Section Galerie -->
+    <section class="section" style="background-color: #ffffff;">
+        <h2 class="section-title">Galerie</h2>
+        <div class="divider"></div>
         <div class="gallery-grid">
-            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=400&q=80" alt="Mariage">
-            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=400&q=80" alt="Mariage">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=300&q=80" alt="Photo 1">
+            <img src="https://images.unsplash.com/photo-1519225495810-7512c696505a?auto=format&fit=crop&w=300&q=80" alt="Photo 2">
+            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=300&q=80" alt="Photo 3">
+            <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=300&q=80" alt="Photo 4">
+            <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=300&q=80" alt="Photo 5">
+            <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=300&q=80" alt="Photo 6">
         </div>
     </section>
 
-    <section class="section">
-        <h2>Confirmer votre présence</h2>
-        <iframe data-tally-src="https://tally.so/embed/RG299p?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" width="100%" height="400" frameborder="0" title="RSVP"></iframe>
-    </section>
+    <!-- 6. Section de Commande Finale (Au lieu de confirmation de présence) -->
+    <footer class="footer-cta">
+        <h2>Achat du modèle personnalisé</h2>
+        <p>Vous souhaitez commander ce magnifique modèle pour votre propre événement ?</p>
+        <a href="https://wa.me/243XXXXXXXXX?text=Bonjour%20Smartech,%20je%20viens%20de%20tester%20la%20démo%20du%20modèle%20Éternel%20et%20je%20souhaite%20le%20commander%20!" 
+           target="_blank" class="btn-commander">
+           Commander le site
+        </a>
+    </footer>
 
-    <div class="cta-box">
-        <h2>Ce modèle vous plaît ?</h2>
-        <a href="https://wa.me/243XXXXXXXXX?text=Bonjour%20Smartech,%20je%20souhaite%20commander%20le%20modèle%20Éternel" 
-           target="_blank" class="btn-commander">🛒 Commander ce modèle</a>
-    </div>
-
+    <!-- Logique JavaScript du Compte à rebours dynamique -->
     <script>
-        // Compte à rebours
-        var weddingDate = new Date("Sep 12, 2026 15:30:00").getTime();
-        var x = setInterval(function() {
+        var targetDate = new Date("Dec 12, 2026 16:00:00").getTime();
+
+        setInterval(function() {
             var now = new Date().getTime();
-            var distance = weddingDate - now;
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            document.getElementById("countdown").innerHTML = days + " jours avant le grand jour !";
+            var diff = targetDate - now;
+
+            var d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            var h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            var s = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = d < 10 ? "0" + d : d;
+            document.getElementById("hours").innerText = h < 10 ? "0" + h : h;
+            document.getElementById("minutes").innerText = m < 10 ? "0" + m : m;
+            document.getElementById("seconds").innerText = s < 10 ? "0" + s : s;
         }, 1000);
     </script>
-    <script async src="https://tally.so/widgets/embed.js"></script>
 </body>
 </html>
