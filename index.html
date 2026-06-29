@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
-        /* Base du site (Inspiré des captures) */
+        /* Base du site */
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
@@ -150,7 +150,7 @@
             border-radius: 8px;
         }
 
-        /* Section de Commande Finale (Fond Noir comme sur l'image) */
+        /* Section de Commande Finale (Fond Noir) */
         .footer-cta {
             background-color: #1a1a1a;
             color: #ffffff;
@@ -169,21 +169,23 @@
             margin-bottom: 30px;
         }
 
-        .btn-commander {829 744 248}
+        /* Bouton dynamique avec sticker chariot et effet d'avancement au survol */
+        .btn-commander {
             display: inline-block;
             background-color: #ccab6d;
             color: #ffffff;
             text-decoration: none;
             font-weight: bold;
-            padding: 15px 40px;
+            padding: 16px 45px;
             border-radius: 30px;
             font-size: 16px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: transform 0.2s;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease;
         }
 
         .btn-commander:hover {
-            transform: translateY(-2px);
+            background-color: #dcb87d;
+            transform: scale(1.06); /* Effet d'avancement / zoom dynamique */
         }
     </style>
 </head>
@@ -222,11 +224,11 @@
         <h2 class="section-title">Notre Histoire</h2>
         <div class="divider"></div>
         <p class="history-text">
-            Notre histoire a commencé comme un murmure du destin — deux âmes qui se sont trouvées au milieu du tumulte de la vie. Depuis ce premier regard, chaque jour passé ensemble a été une promesse d'éternité. De nos rires partés à nos rêves entrelacés, notre amour a grandi comme un jardin cultivé avec patience et tendresse. Aujourd'hui, nous sommes prêts à écrire le plus beau chapitre de notre vie, entourés de ceux qui nous sont chers.
+            Notre histoire a commencé comme un murmure du destiny — deux âmes qui se sont trouvées au milieu du tumulte de la vie. Depuis ce premier regard, chaque jour passé ensemble a été une promesse d'éternité. De nos rires partagés à nos rêves entrelacés, notre amour a grandi comme un jardin cultivé avec patience et tendresse. Aujourd'hui, nous sommes prêts à écrire le plus beau chapitre de notre vie, entourés de ceux qui nous sont chers.
         </p>
     </section>
 
-    <!-- 5. Section Galerie -->
+    <!-- 5. Section Galerie (Image 2 corrigée) -->
     <section class="section" style="background-color: #ffffff;">
         <h2 class="section-title">Galerie</h2>
         <div class="divider"></div>
@@ -240,13 +242,13 @@
         </div>
     </section>
 
-    <!-- 6. Section de Commande Finale (Au lieu de confirmation de présence) -->
+    <!-- 6. Section de Commande Finale (Numéro intégré + Sticker Chariot 🛒) -->
     <footer class="footer-cta">
         <h2>Achat du modèle personnalisé</h2>
         <p>Vous souhaitez commander ce magnifique modèle pour votre propre événement ?</p>
-        <a href="https://wa.me/243XXXXXXXXX?text=Bonjour%20Smartech,%20je%20viens%20de%20tester%20la%20démo%20du%20modèle%20Éternel%20et%20je%20souhaite%20le%20commander%20!" 
+        <a href="https://wa.me/829744248?text=Bonjour%20Smartech,%20je%20viens%20de%20tester%20la%20démo%20du%20modèle%20Éternel%20et%20je%20souhaite%20le%20commander%20!" 
            target="_blank" class="btn-commander">
-           Commander le site
+           🛒 Commander le site
         </a>
     </footer>
 
